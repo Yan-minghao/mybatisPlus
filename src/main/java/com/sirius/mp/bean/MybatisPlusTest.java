@@ -1,4 +1,4 @@
-package com.sirius.test;
+package com.sirius.mp.bean;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -6,7 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.SQLException;
 
 public class MybatisPlusTest {
     private ApplicationContext iocContext= new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -18,4 +17,6 @@ public class MybatisPlusTest {
         System.out.println("**************************************************");
         System.out.println(con);
     }
+
+
 }
