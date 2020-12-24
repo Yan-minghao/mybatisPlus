@@ -1,4 +1,4 @@
-package com.sirius.mp.bean;
+package com.sirius.test;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -7,8 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
+/**
+ * @author ymh_sirius
+ */
 public class MybatisPlusTest {
-    private ApplicationContext iocContext= new ClassPathXmlApplicationContext("applicationContext.xml");
+
+   private ApplicationContext iocContext= new ClassPathXmlApplicationContext("applicationContext.xml");
 
     @Test
     public void test  () throws Exception {
@@ -17,6 +21,7 @@ public class MybatisPlusTest {
         System.out.println("**************************************************");
         System.out.println(con);
     }
+
 
 
 }

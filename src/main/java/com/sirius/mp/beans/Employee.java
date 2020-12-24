@@ -1,4 +1,4 @@
-package com.sirius.mp.bean;
+package com.sirius.mp.beans;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
