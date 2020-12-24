@@ -12,7 +12,7 @@ import java.sql.Connection;
  */
 public class MybatisPlusTest {
 
-   private ApplicationContext iocContext= new ClassPathXmlApplicationContext("applicationContext.xml");
+  private ApplicationContext iocContext= new ClassPathXmlApplicationContext("applicationContext.xml");
 
     @Test
     public void test  () throws Exception {
@@ -21,6 +21,7 @@ public class MybatisPlusTest {
         System.out.println("**************************************************");
         System.out.println(con);
     }
+
 
 
 
