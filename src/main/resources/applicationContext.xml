@@ -51,7 +51,7 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <!--定义 MybatisPlus 添加全局策略配置-->
     <bean id="globalConfiguration" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
         <!-- 驼峰命名的映射，在2.3版本以后，dbColumnUnderline 默认值就是true -->
-        <property name="dbColumnUnderline" value="true"></property>
+        <property name="dbColumnUnderline" value="false"></property>
 
         <!-- Mysql 全局的主键策略（替代实体中@TableId(value = "id", type = IdType.AUTO))
             AUTO(0, "数据库ID自增"),

@@ -1,5 +1,6 @@
 package com.sirius.mp.beans;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -21,6 +22,7 @@ public class Employee {
     /**
      * 姓名
      */
+    @TableField("last_name")
     private String lastName;
 
     /**
@@ -37,4 +39,9 @@ public class Employee {
      * 年龄
      */
     private Integer age;
+    /**
+     * 金额
+     */
+    @TableField(exist=false)
+    private Double salary;
 }
