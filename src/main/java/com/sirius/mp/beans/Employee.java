@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@TableName(value="tbl_employee")
+//@TableName(value="tbl_employee")
 public class Employee {
 
     /**
      * 主键
      */
-    @TableId(value = "id",type= IdType.AUTO)
+    //@TableId(value = "id",type= IdType.AUTO)
     private Integer id;
 
     /**
