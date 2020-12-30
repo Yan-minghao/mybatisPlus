@@ -37,6 +37,8 @@ public class MybatisPlusTest {
         employee.setGender(1);
         System.out.println("employee:----" + employee);
         employeeMapper.insert(employee);
+        //获取主键值
+        System.out.println("key:-----"+employee.getId());
     }
 
 
