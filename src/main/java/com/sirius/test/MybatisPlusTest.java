@@ -33,12 +33,14 @@ public class MybatisPlusTest {
         Employee employee = new Employee();
         employee.setLastName("Do");
         employee.setAge(30);
-        employee.setEmail("ymh254089@163.com");
-        employee.setGender(1);
+//        employee.setEmail("ymh25089@163.com");
+//        employee.setGender(1);
         System.out.println("employee:----" + employee);
-        employeeMapper.insert(employee);
+//        employeeMapper.insert(employee);
+        employeeMapper.insertAllColumn(employee);
         //获取主键值
-        System.out.println("key:-----"+employee.getId());
+        System.out.println("key:-----"+employee.getId(
+        ));
     }
 
 
