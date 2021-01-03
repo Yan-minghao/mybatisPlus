@@ -43,12 +43,16 @@ public class MybatisPlusTest {
         ));
     }
 
+    /*
+    * 更新操作
+    * */
     @Test
     public void updateByIdTest(){
         Employee employee = new Employee();
         employee.setId(11);
         employee.setEmail("hhh@163.com");
-        employeeMapper.updateById(employee);
+       // employeeMapper.updateById(employee);
+        employeeMapper.updateAllColumnById(employee);
     }
 
 
