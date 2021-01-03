@@ -43,5 +43,14 @@ public class MybatisPlusTest {
         ));
     }
 
+    @Test
+    public void updateByIdTest(){
+        Employee employee = new Employee();
+        employee.setId(11);
+        employee.setEmail("hhh@163.com");
+        employeeMapper.updateById(employee);
+    }
+
+
 
 }
