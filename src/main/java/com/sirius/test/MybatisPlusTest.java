@@ -43,7 +43,7 @@ public class MybatisPlusTest {
         ));
     }
 
-    /*
+    /**
     * 更新操作
     * */
     @Test
@@ -54,6 +54,8 @@ public class MybatisPlusTest {
        // employeeMapper.updateById(employee);
         employeeMapper.updateAllColumnById(employee);
     }
+
+
 
 
 
