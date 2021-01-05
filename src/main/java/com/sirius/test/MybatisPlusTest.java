@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,18 +42,46 @@ public class MybatisPlusTest {
 //        employeeMapper.insert(employee);
         employeeMapper.insertAllColumn(employee);
         //获取主键值
-        System.out.println("key:-----"+employee.getId(
+        System.out.println("key:-----" + employee.getId(
         ));
     }
 
     @Test
-    public void testSelect(){
+    public void testSelect() {
         Employee employee = new Employee();
         System.out.println("----------selectPage   start--------");
         List<Employee> employees = employeeMapper.selectPage(new Page(1, 1), null);
         System.out.println(employees);
         System.out.println("----------selectPage   end--------");
 
+    }
+
+    @Test
+    public void testDelete() {
+        //1.deleteById
+//        System.out.println("----------deleteById   start--------");
+//        Integer res = employeeMapper.deleteById(12);
+//        System.out.println(res);
+//        System.out.println("----------deleteById   end--------");
+
+
+        //2.deleteByMap
+//        System.out.println("----------deleteByMap   start--------");
+//        Map<String, Object> map = new HashMap<String, Object>();
+//        map.put("id",10);
+//
+//        Integer integer = employeeMapper.deleteByMap(map);
+//        System.out.println(integer);
+//        System.out.println("----------deleteByMap   end--------");
+
+
+        System.out.println("----------deleteBatchIds   start--------");
+        List<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        Integer integer = employeeMapper.deleteBatchIds(list);
+        System.out.println(integer);
+        System.out.println("----------deleteBatchIds   end--------");
     }
 
 
