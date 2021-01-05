@@ -1,5 +1,6 @@
 package com.sirius.test;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.sirius.mp.beans.Employee;
 import com.sirius.mp.mapper.EmployeeMapper;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.List;
 
 /**
  * @author ymh_sirius
@@ -41,6 +43,18 @@ public class MybatisPlusTest {
         //获取主键值
         System.out.println("key:-----"+employee.getId(
         ));
+    }
+
+    @Test
+    public void testSelect(){
+        Employee employee = new Employee();
+        System.out.println("----------selectPage   start--------");
+        List<Employee> employees = employeeMapper.selectPage(new Page(1, 1), null);
+        System.out.println(employees);
+        System.out.println("----------selectPage   end--------");
+
+
+
     }
 
 
