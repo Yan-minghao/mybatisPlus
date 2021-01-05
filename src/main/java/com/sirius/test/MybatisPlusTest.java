@@ -55,7 +55,15 @@ public class MybatisPlusTest {
         employeeMapper.updateAllColumnById(employee);
     }
 
+    /*
+    * 查询
+    * */
+    @Test
+    public void selectTest(){
+        Employee employee = new Employee();
+        //1.selectbyId 查询
 
+    }
 
 
 
