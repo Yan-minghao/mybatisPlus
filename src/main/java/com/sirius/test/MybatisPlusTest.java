@@ -8,6 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author ymh_sirius
@@ -62,6 +66,34 @@ public class MybatisPlusTest {
     public void selectTest(){
         Employee employee = new Employee();
         //1.selectbyId 查询
+//        Employee employee1 = employeeMapper.selectById(1);
+//        System.out.println("employee_____________________"+employee);
+
+       //2.selectOne 查询 只能查询出一条数据
+        employee.setId(1);
+       // employee.setLastName("Do");
+//        Employee employee2 = employeeMapper.selectOne(employee);
+//        System.out.println("------------selectOne start---------");
+//        System.out.println(employee2);
+//        System.out.println("------------selectOne end---------");
+
+        //3.selectBatchIds 查询 只能查询出一条数据
+//        List<String> list = new ArrayList<String>();
+//        for(int i=0;i<100;i++){
+//            list.add(Integer.toString(i));
+//        }
+//        List<Employee> employees = employeeMapper.selectBatchIds(list);
+//        System.out.println("------------selectBatchIds start---------");
+//        System.out.println(employees);
+//        System.out.println("------------selectBatchIds end---------");
+
+        //4.selectByMpa 查询 只能查询出一条数据
+//        Map<String,Object> map = new HashMap<String,Object>();
+//        map.put("gender","1");
+//        List<Employee> employeeList= employeeMapper.selectByMap(map);
+//        System.out.println("------------selectByMpa start---------");
+//        System.out.println(employeeList);
+//        System.out.println("------------selectByMpa end---------");
 
     }
 
