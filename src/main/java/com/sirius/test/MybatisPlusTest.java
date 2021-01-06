@@ -8,10 +8,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author ymh_sirius
@@ -70,7 +66,7 @@ public class MybatisPlusTest {
 //        System.out.println("employee_____________________"+employee);
 
        //2.selectOne 查询 只能查询出一条数据
-        employee.setId(1);
+//        employee.setId(1);
        // employee.setLastName("Do");
 //        Employee employee2 = employeeMapper.selectOne(employee);
 //        System.out.println("------------selectOne start---------");
