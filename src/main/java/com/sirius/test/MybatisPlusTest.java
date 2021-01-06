@@ -1,13 +1,17 @@
 package com.sirius.test;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.sirius.mp.beans.Employee;
 import com.sirius.mp.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author ymh_sirius
@@ -127,6 +131,12 @@ public class MybatisPlusTest {
 //        System.out.println("------------selectByMpa start---------");
 //        System.out.println(employeeList);
 //        System.out.println("------------selectByMpa end---------");
+
+        //5.selectPage
+        System.out.println("----------selectPage   start--------");
+        List<Employee> employees = employeeMapper.selectPage(new Page(1, 1), null);
+        System.out.println(employees);
+        System.out.println("----------selectPage   end--------");
 
     }
 
