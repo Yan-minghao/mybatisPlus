@@ -1,18 +1,18 @@
 package com.sirius.mp.beans;
 
+import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 
 @Data
 @NoArgsConstructor
 //@TableName(value="tbl_employee")
-public class Employee {
-
+public class Employee extends Model<Employee> {
+//    ActiveRecord(活动记录)
     /**
      * 主键
      */
@@ -40,8 +40,15 @@ public class Employee {
      */
     private Integer age;
     /**
+     * 主键
+    * */
+    @Override
+    protected Serializable pkVal() {
+        return id;
+    }
+    /**
      * 金额
      */
-    @TableField(exist=false)
-    private Double salary;
+//    @TableField(exist=false)
+//    private Double salary;
 }
