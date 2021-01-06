@@ -21,13 +21,12 @@ public class ARTest {
     //insert
     @Test
     public void arInsert(){
-        Employee employee = new Employee();
-        employee.setAge(27);
-        employee.setLastName("sirius");
-        employee.setEmail("ymh@163.com");
-        employee.setGender(1);
-        boolean insert = employee.insert();
-        System.out.println(insert);
+//        employee.setAge(27);
+//        employee.setLastName("sirius");
+//        employee.setEmail("ymh@163.com");
+//        employee.setGender(1);
+//        boolean insert = employee.insert();
+//        System.out.println(insert);
     }
     //update
     @Test
