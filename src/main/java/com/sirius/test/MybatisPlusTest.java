@@ -96,7 +96,7 @@ public class MybatisPlusTest {
         employeeMapper.updateAllColumnById(employee);
     }
 
-    /*
+    /**
      * 查询
      * */
     @Test
