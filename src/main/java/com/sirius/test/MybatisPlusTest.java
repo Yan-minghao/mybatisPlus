@@ -1,5 +1,7 @@
 package com.sirius.test;
 
+import com.baomidou.mybatisplus.mapper.Condition;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.sirius.mp.beans.Employee;
 import com.sirius.mp.mapper.EmployeeMapper;
@@ -138,6 +140,33 @@ public class MybatisPlusTest {
         System.out.println(employees);
         System.out.println("----------selectPage   end--------");
 
+    }
+
+    /**
+    * 条件选择器
+    * */
+    @Test
+    public void testEntityWrapper(){
+        //1.entityWrapper selectPage
+        List<Employee> last_name = employeeMapper.selectPage(new Page(1, 1), new EntityWrapper<Employee>()
+                .eq("last_name", "1"));
+//        System.out.println(last_name);
+        System.out.println("-----------start");
+        //2.entityWrapper selectList
+//         List<Employee> last_name1 = employeeMapper.selectList(new EntityWrapper<Employee>().like("last_name", "1"));
+//        System.out.println(last_name1);
+        System.out.println("------  update  -----");
+        //3.update 更新
+        //Employee employee = new Employee();
+        //employee.setAge(23);
+        //employeeMapper.update(employee,new EntityWrapper<Employee>().eq("age","444"));
+        //4.delete
+//        Integer result = employeeMapper.delete(new EntityWrapper<Employee>().eq("last_name", "1"));
+//        System.out.println(result);
+
+        //5.condition
+        List list = employeeMapper.selectPage(new Page<Employee>(1, 1), Condition.create().eq("last_name", "11"));
+        System.out.println(list);
     }
 
 }
