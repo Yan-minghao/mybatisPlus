@@ -39,25 +39,62 @@ public class MybatisPlusTest {
 //        employeeMapper.insert(employee);
         employeeMapper.insertAllColumn(employee);
         //获取主键值
-        System.out.println("key:-----"+employee.getId(
+        System.out.println("key:-----" + employee.getId(
         ));
     }
 
+    @Test
+    public void testSelect() {
+        Employee employee = new Employee();
+        System.out.println("----------selectPage   start--------");
+        List<Employee> employees = employeeMapper.selectPage(new Page(1, 1), null);
+        System.out.println(employees);
+        System.out.println("----------selectPage   end--------");
+
+    }
+
+    @Test
+    public void testDelete() {
+        //1.deleteById
+//        System.out.println("----------deleteById   start--------");
+//        Integer res = employeeMapper.deleteById(12);
+//        System.out.println(res);
+//        System.out.println("----------deleteById   end--------");
+
+
+        //2.deleteByMap
+//        System.out.println("----------deleteByMap   start--------");
+//        Map<String, Object> map = new HashMap<String, Object>();
+//        map.put("id",10);
+//
+//        Integer integer = employeeMapper.deleteByMap(map);
+//        System.out.println(integer);
+//        System.out.println("----------deleteByMap   end--------");
+
+
+        System.out.println("----------deleteBatchIds   start--------");
+        List<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        Integer integer = employeeMapper.deleteBatchIds(list);
+        System.out.println(integer);
+        System.out.println("----------deleteBatchIds   end--------");
+    }
     /**
-    * 更新操作
-    * */
+     * 更新操作
+     * */
     @Test
     public void updateByIdTest(){
         Employee employee = new Employee();
         employee.setId(11);
         employee.setEmail("hhh@163.com");
-       // employeeMapper.updateById(employee);
+        // employeeMapper.updateById(employee);
         employeeMapper.updateAllColumnById(employee);
     }
 
     /*
-    * 查询
-    * */
+     * 查询
+     * */
     @Test
     public void selectTest(){
         Employee employee = new Employee();
@@ -65,9 +102,9 @@ public class MybatisPlusTest {
 //        Employee employee1 = employeeMapper.selectById(1);
 //        System.out.println("employee_____________________"+employee);
 
-       //2.selectOne 查询 只能查询出一条数据
+        //2.selectOne 查询 只能查询出一条数据
 //        employee.setId(1);
-       // employee.setLastName("Do");
+        // employee.setLastName("Do");
 //        Employee employee2 = employeeMapper.selectOne(employee);
 //        System.out.println("------------selectOne start---------");
 //        System.out.println(employee2);
@@ -92,7 +129,5 @@ public class MybatisPlusTest {
 //        System.out.println("------------selectByMpa end---------");
 
     }
-
-
 
 }
