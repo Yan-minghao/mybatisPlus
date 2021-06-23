@@ -32,4 +32,9 @@ public class Employee {
      * 年龄
      */
     private Integer age;
+
+    /**
+    * 身价
+    * */
+    private String money;
 }

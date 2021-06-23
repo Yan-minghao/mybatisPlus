@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
  * className:MyFontImage
  * Description:图片弱化
  *
- * @author:ymh
+ * @author:yanminghao
  */
 
 public class MyFontImage {
